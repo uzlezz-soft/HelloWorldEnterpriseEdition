@@ -1,6 +1,11 @@
-﻿using BenchmarkDotNet.Running;
-using HelloWorldEnterpriseEdition.Implementation;
+﻿using HelloWorldEnterpriseEdition.Implementation;
 using HelloWorldEnterpriseEdition.Interfaces;
 
-StringWriterProviderImplementation stringWriterProviderImplementation = new HelloWorldStringWriterProviderImplementation();
+// Create new instance of HelloWorldStringWriterProviderImplementationFactory
+IStringWriterProviderImplementationFactory stringWriterProviderImplementationFactory = new HelloWorldStringWriterProviderImplementationFactory();
+
+// Get HelloWorldStringWriterProviderImplementation instance from HelloWorldStringWriterProviderImplementationFactory
+StringWriterProviderImplementation stringWriterProviderImplementation = stringWriterProviderImplementationFactory.Create();
+
+// Execute HelloWorldStringWriterProviderImplementation
 stringWriterProviderImplementation.Execute();
