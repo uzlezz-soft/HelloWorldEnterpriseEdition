@@ -1,0 +1,6 @@
+﻿using BenchmarkDotNet.Running;
+using HelloWorldEnterpriseEdition.Implementation;
+using HelloWorldEnterpriseEdition.Interfaces;
+
+StringWriterProviderImplementation stringWriterProviderImplementation = new HelloWorldStringWriterProviderImplementation();
+stringWriterProviderImplementation.Execute();
